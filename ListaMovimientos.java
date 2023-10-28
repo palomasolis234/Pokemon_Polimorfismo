@@ -1,31 +1,44 @@
-package pokemon;
-
+*
+ * @author palom
+ */
 import java.util.ArrayList;
+
 public class ListaMovimientos {
-    private ArrayList<Movimiento> movimientos=new ArrayList<>();
-    
-    public  ListaMovimientos(){
-     //LISTA DE MOVIMIENTOS DE CHARIZARRD
-     movimientos.add(new Movimiento("Tajo Aereo",70,Tipo.VOLADOR,15));
-     movimientos.add(new Movimiento("Arañozo",40,Tipo.NORMAL,35));
-     movimientos.add(new Movimiento("Ascuas",40,Tipo.FUEGO,25));
-     movimientos.add(new Movimiento("Garra Dragon",80,Tipo.DRAGON,15));
-             
-    //LISTA DE MOVIMIENTOS DE LAPRAS
-     movimientos.add(new Movimiento("Gruñido",30,Tipo.NORMAL,40));
-     movimientos.add(new Movimiento("Pistola Agua",40,Tipo.AGUA,25));
-     movimientos.add(new Movimiento("Rayo confuso",40,Tipo.FANTASMA,25));
-     movimientos.add(new Movimiento("Canto Helado",40,Tipo.DRAGON,30)); 
-        
-    }
-    
-    public Movimiento buscarMovimientoPorNombre(String nombre){
-        for(Movimiento movimiento:movimientos){
-            if(movimiento.getNombre().equals(nombre)){
-                return movimiento;
-            }
-            
-        }
+    private ArrayList<movimiento> movimientos = new ArrayList<>();
+
+ /**   
+ * 
+ */
+public ListaMovimientos() {
+
+// Movimientos de tipo Fuego Charmeleon
+movimientos.add(new Movimiento (nombre: "Ascuas Ember", puntosDeAtaque:40, Tipo. TIERRA, pp:25));
+movimientos.add(new Movimiento (nombre: "Colmillo Ígneo Fire Fang", puntosDeAtaque:65, Tipo. TIERRA, pp:15));
+movimientos.add(new Movimiento (nombre: "Lanzallamas Flamethrower", puntosDeAtaque:40, Tipo. TIERRA, pp:20));
+movimientos.add(new Movimiento (nombre: "Buena Baza Assurance", puntosDeAtaque:90, Tipo. TIERRA, pp:15));
+movimientos.add(new Movimiento (nombre: "Giro Fuego Fire Spin", puntosDeAtaque:35, Tipo. TIERRA, pp:15));
+
+
+
+// Movimientos de tipo sieniestro PokéDex Nacional
+movimientos.add(new Movimiento (nombre: "Finta Feint Attack", puntosDeAtaque:60, Tipo. SINESTRO, pp:20));
+movimientos.add(new Movimiento (nombre: "Buena Baza Assurance", puntosDeAtaque:60, Tipo. SINESTRO, pp:10));
+movimientos.add(new Movimiento (nombre: "Persecución Pursuit", puntosDeAtaque:40, Tipo. TIERRA, pp:20));
+movimientos.add(new Movimiento (nombre: "Buena Baza Assurance", puntosDeAtaque:70, Tipo. TIERRA, pp:15));
+
+
+
+
+// Metodo que devuelve el movimiento buscando el nombre 
+Codeium: Refactor | Explain 
+public Movimiento buscarMovimientoPorNombre(String nombre) {
+    for (Movimiento movimiento: movimientos) {
+    if (movimiento.getNombre().equals (nombre)) { return movimiento;
+      return null;
+     }
+
+}
+
         return null;
     }
     
